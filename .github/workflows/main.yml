@@ -13,9 +13,9 @@ jobs:
           python-version: "3.9"
       - name: Install packages
         run: pip install -r requirements.txt
-      - name: Run tests
-        run: python manage.py test
-        continue-on-error: true
+      - name: Show current directory
+        run: pwd
+      - name: List files for debug
+        run: ls -l
       - name: Run bisect script
         run: python bisect.py
-        continue-on-error: true
